@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootCompare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">FootCompare</div>
+            <button id="langToggle" class="lang-btn" onclick="toggleLanguage()">English</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <h1 id="mainTitle">FootCompare: مقارنة وإحصائيات كرة القدم</h1>
+            <p id="subDesc">ابحث عن ناديك المفضل أو قارن بين أفضل الفرق.</p>
+                        <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن نادي... (مثال: ريال مدريد)">
+                <button type="button" onclick="searchClub()"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+        <section class="compare-card">
+            <div class="card-container">
+                <div class="team-selection">
+                    <div class="logo-placeholder" id="logo1"></div>
+                    <h3 id="team1Title">الفريق الأول</h3>
+                    <div class="select-wrapper">
+                        <select id="team1Select">
+<option value="barcelona">برشلونة</option>
+<option value="real_madrid">ريال مدريد</option>
+<option value="bayern_munich">بايرن ميونخ</option>
+<option value="man_city">مانشستر سيتي</option>
+<option value="liverpool">ليفربول</option>
+<option value="galatasaray">غلطة سراي</option>
+<option value="ajax">أياكس أمستردام</option>
+<option value="anderlecht">أندرلخت</option>
+<option value="arsenal">أرسنال</option>
+<option value="aston_villa">أستون فيلا</option>
+<option value="athletic_bilbao">أتلتيك بيلباو</option>
+<option value="atletico_madrid">أتلتيكو مدريد</option>
+<option value="bayer_leverkusen">باير ليفركوزن</option>
+<option value="benfica">بنفيكا</option>
+<option value="besiktas">بشكتاش</option>
+<option value="boca_juniors">بوكا جونيورز</option>
+<option value="celtic">سيلتيك</option>
+<option value="chelsea">تشيلسي</option>
+<option value="club_brugge">كلوب بروج</option>
+<option value="dortmund">بوروسيا دورتموند</option>
+<option value="fenerbahce">فنربخشة</option>
+<option value="al_ahli">الأهلي السعودي</option>
+<option value="al_hilal">الهلال</option>
+<option value="al_ittihad">الاتحاد</option>
+<option value="al_nassr">النصر</option>
+<option value="feyenoord">فاينورد</option>
+<option value="flamengo">فلامنغو</option>
+<option value="inter">إنتر ميلان</option>
+<option value="juventus">يوفنتوس</option>
+<option value="lazio">لاتسيو</option>
+<option value="lyon">أولمبيك ليون</option>
+<option value="manchester_united">مانشستر يونايتد</option>
+<option value="marseille">مارسيليا</option>
+<option value="milan">إي سي ميلان</option>
+<option value="napoli">نابولي</option>
+<option value="palmeiras">بالميراس</option>
+<option value="porto">بورتو</option>
+<option value="psg">باريس سان جيرمان</option>
+<option value="psv">آيندهوفن</option>
+<option value="rangers">رينجرز</option>
+<option value="river_plate">ريفر بليت</option>
+<option value="roma">روما</option>
+<option value="saint_etienne">سانت إتيان</option>
+<option value="santos">سانتوس</option>
+<option value="sao_paulo">ساو باولو</option>
+<option value="schalke">شالكه 04</option>
+<option value="sevilla">إشبيلية</option>
+<option value="sporting">سبورتينغ لشبونة</option>
+<option value="tottenham">توتنهام هوتسبير</option>
+<option value="valencia">فالنسيا</option>
+                        </select>
+                        <i class="fas fa-chevron-down caret-icon"></i>
+                    </div>
+                </div>
+                <div class="vs-divider">
+                    <div class="vs-circle">VS</div>
+                </div>
+                <div class="team-selection">
+                    <div class="logo-placeholder" id="logo2"></div>
+                    <h3 id="team2Title">الفريق الثاني</h3>
+                    <div class="select-wrapper">
+                        <select id="team2Select">
+<option value="barcelona">برشلونة</option>
+<option value="real_madrid">ريال مدريد</option>
+<option value="bayern_munich">بايرن ميونخ</option>
+<option value="man_city">مانشستر سيتي</option>
+<option value="liverpool">ليفربول</option>
+<option value="galatasaray">غلطة سراي</option>
+<option value="ajax">أياكس أمستردام</option>
+<option value="anderlecht">أندرلخت</option>
+<option value="arsenal">أرسنال</option>
+<option value="aston_villa">أستون فيلا</option>
+<option value="athletic_bilbao">أتلتيك بيلباو</option>
+<option value="atletico_madrid">أتلتيكو مدريد</option>
+<option value="bayer_leverkusen">باير ليفركوزن</option>
+<option value="benfica">بنفيكا</option>
+<option value="besiktas">بشكتاش</option>
+<option value="boca_juniors">بوكا جونيورز</option>
+<option value="celtic">سيلتيك</option>
+<option value="chelsea">تشيلسي</option>
+<option value="club_brugge">كلوب بروج</option>
+<option value="dortmund">بوروسيا دورتموند</option>
+<option value="fenerbahce">فنربخشة</option>
+<option value="al_ahli">الأهلي السعودي</option>
+<option value="al_hilal">الهلال</option>
+<option value="al_ittihad">الاتحاد</option>
+<option value="al_nassr">النصر</option>
+<option value="feyenoord">فاينورد</option>
+<option value="flamengo">فلامنغو</option>
+<option value="inter">إنتر ميلان</option>
+<option value="juventus">يوفنتوس</option>
+<option value="lazio">لاتسيو</option>
+<option value="lyon">أولمبيك ليون</option>
+<option value="manchester_united">مانشستر يونايتد</option>
+<option value="marseille">مارسيليا</option>
+<option value="milan">إي سي ميلان</option>
+<option value="napoli">نابولي</option>
+<option value="palmeiras">بالميراس</option>
+<option value="porto">بورتو</option>
+<option value="psg">باريس سان جيرمان</option>
+<option value="psv">آيندهوفن</option>
+<option value="rangers">رينجرز</option>
+<option value="river_plate">ريفر بليت</option>
+<option value="roma">روما</option>
+<option value="saint_etienne">سانت إتيان</option>
+<option value="santos">سانتوس</option>
+<option value="sao_paulo">ساو باولو</option>
+<option value="schalke">شالكه 04</option>
+<option value="sevilla">إشبيلية</option>
+<option value="sporting">سبورتينغ لشبونة</option>
+<option value="tottenham">توتنهام هوتسبير</option>
+<option value="valencia">فالنسيا</option>
+                        </select>
+                        <i class="fas fa-chevron-down caret-icon"></i>
+                    </div>
+                </div>
+                <div class="card-bottom">
+    <button class="compare-btn" onclick="startComparison()">
+        <i class="fas fa-bolt"></i> <span id="compareText">ابدأ المقارنة</span>
+    </button>
+</div>
+            </div>
+        </section>
+                <section class="explore-section" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <h2 id="exploreTitle" style="text-align: center; color: var(--text-white); margin-bottom: 25px; font-size: 1.5rem;">استكشف عالم كرة القدم</h2>
+
+            <div id="continentalGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin-bottom: 20px;">
+                </div>
+
+            <div id="countriesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 10px;">
+                </div>
+
+            <div id="exploreDetails" style="display: none; margin-top: 25px; background: linear-gradient(135deg, rgba(0,40,85,0.9) 0%, rgba(0,0,0,0.8) 100%); padding: 20px; border-radius: 12px; border: 1px solid var(--light-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 10px; margin-bottom: 15px;">
+                    <h3 id="detailsTitle" style="color: gold; margin: 0; font-size: 1.3rem;"></h3>
+                    <button onclick="closeExploreDetails()" style="background: rgba(255,0,0,0.2); color: #ff4d4d; border: 1px solid #ff4d4d; border-radius: 5px; width: 30px; height: 30px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center;">&times;</button>
+                </div>
+                
+                <div id="tournamentsList" style="margin-bottom: 15px;">
+                    <h4 id="tournamentsLabel" style="color: var(--light-grey); margin-bottom: 10px; font-size: 1rem;">🏆 البطولات</h4>
+                    <div id="tournamentsContent" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+                </div>
+
+                <div id="clubsList">
+                    <h4 id="clubsLabel" style="color: var(--light-grey); margin-bottom: 10px; font-size: 1rem;">🛡️ أبرز الأندية / المنتخبات</h4>
+                    <div id="clubsContent" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="database.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+</body>
+</html>

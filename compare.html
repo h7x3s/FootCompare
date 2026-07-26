@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة المقارنة - FootCompare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" style="text-decoration: none; color: white;">FootCompare</a>
+        </div>
+    </header>
+
+    <main class="club-page-main">
+        <div class="page-actions">
+            <a href="index.html" class="action-btn back-btn"><i class="fas fa-arrow-right"></i> <span id="backText">العودة للرئيسية</span></a>
+        </div>
+
+        <section class="club-profile" id="compareHeader" style="justify-content: space-around; text-align: center;">
+        </section>
+
+        <section class="club-trophies" style="margin-bottom: 40px;">
+            <h2><i class="fas fa-trophy"></i> <span id="trophiesTitle">مقارنة السجل التاريخي للبطولات</span></h2>
+            <div id="trophiesCompareGrid" style="display: grid; gap: 15px; margin-top: 20px;">
+            </div>
+        </section>
+
+        <section class="club-trophies">
+            <h2><i class="fas fa-handshake" style="color: #3498db;"></i> <span id="h2hTitle">أبرز المواجهات المباشرة (بيانات حية)</span></h2>
+            <div id="matchesList" style="display: grid; gap: 15px; margin-top: 20px;">
+                <p style="color: var(--light-grey); text-align: center;" id="loadingText">جاري جلب تاريخ المواجهات...</p>
+            </div>
+        </section>
+    </main>
+    <script src="database.js" charset="utf-8"></script>
+    <script src="compare.js" charset="utf-8"></script>
+</body>
+</html>

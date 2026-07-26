@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إحصائيات دور الـ 16 - برشلونة</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #2c3e50;
+        padding: 30px;
+        margin: 0;
+    }
+
+    /* تصميم عصري وجذاب لزر العودة للصفحة الرئيسية */
+    .home-btn {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: #ffffff;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .home-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* شبكة البطاقات المتناسقة */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+
+    /* تصميم البطاقات لضمان تساوي الطول والترتيب */
+    .season-card {
+        background-color: #ffffff;
+        border: 1px solid #e1e8ed;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+
+    .season-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .season-card h3 {
+        margin-top: 0;
+        color: #c0392b;
+        border-bottom: 2px solid #ecf0f1;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+
+    .season-card p {
+        line-height: 1.7;
+        margin-bottom: 20px;
+        flex-grow: 1; /* يجبر النص على أخذ المساحة المتاحة لدفع الزر للأسفل بشكل متساوٍ */
+    }
+
+    /* تحويل الرابط إلى زر متناسق وجميل */
+    .details-btn {
+        display: block;
+        text-align: center;
+        background-color: #3498db;
+        color: #ffffff;
+        padding: 12px 0;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .details-btn:hover {
+        background-color: #2980b9;
+    }
+
+    .details-btn:active {
+        transform: scale(0.98);
+    }
+</style>
+</head>
+<body>
+
+    <a href="index.html" class="home-btn">← العودة للصفحة الرئيسية</a>
+
+    <div class="cards-container">
+        
+        <div class="season-card">
+            <h3>موسم 1992-1993</h3>
+            <p><strong>الخصم:</strong> سيسكا موسكو (روسيا)<br>
+            <strong>النتيجة الإجمالية:</strong> 4-3 لصالح سيسكا موسكو.</p>
+            <a href="season-details.html" class="details-btn">عرض تفاصيل النسخة</a>
+        </div>
+        
+        <div class="season-card">
+            <h3>موسم 2004-2005</h3>
+            <p><strong>الخصم:</strong> تشيلسي (إنجلترا)<br>
+            <strong>النتيجة الإجمالية:</strong> 5-4 لصالح تشيلسي.</p>
+            <a href="season-details.html" class="details-btn">عرض تفاصيل النسخة</a>
+        </div>
+
+        <div class="season-card">
+            <h3>موسم 2006-2007</h3>
+            <p><strong>الخصم:</strong> ليفربول (إنجلترا)<br>
+            <strong>النتيجة الإجمالية:</strong> 2-2 (أفضلية الهدف خارج الأرض).</p>
+            <a href="season-details.html" class="details-btn">عرض تفاصيل النسخة</a>
+        </div>
+
+        <div class="season-card">
+            <h3>موسم 2020-2021</h3>
+            <p><strong>الخصم:</strong> باريس سان جيرمان (فرنسا)<br>
+            <strong>النتيجة الإجمالية:</strong> 5-2 لصالح باريس.</p>
+            <a href="season-details.html" class="details-btn">عرض تفاصيل النسخة</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
